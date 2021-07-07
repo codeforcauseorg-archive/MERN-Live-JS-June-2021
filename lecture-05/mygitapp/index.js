@@ -2,12 +2,10 @@ const simpleGit = require('simple-git');
 
 const options = {
     baseDir: process.cwd(),
-    binary: 'git',
-    maxConcurrentProcesses: 6,
+    binary: 'git'
  };
  
-
 const git = simpleGit(options);
 
-git.init();
+git.pull("origin", "main");
 
