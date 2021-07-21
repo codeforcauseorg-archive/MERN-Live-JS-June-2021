@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // console.log("ye dekho chal gya");
+        let ele = document.getElementById("myhead");
+        console.log(ele);
+
+        let interval = setInterval(() => {
+            ele.innerHTML = new Date();
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(interval);
+        }, 15000);
+
+    </script>
+</head>
+
+<body>
+    <h1 id="myhead">Welcome</h1>
+
+</body>
+
+</html>
