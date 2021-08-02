@@ -21,10 +21,12 @@ button {
 
 .expr-header {
   background-color: antiquewhite;
+  text-align: right;
   height: 100px;
   margin: 20px;
   border-radius: 10px;
-  padding: 32px;
+  padding: 16px 0px 0px;
+
   max-height: 100px;
 }
 
