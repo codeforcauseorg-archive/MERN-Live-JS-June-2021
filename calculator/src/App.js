@@ -7,9 +7,11 @@ function App() {
   let numerics = new Set("0123456789.");
   let operators = new Set("+-%*/");
 
+
   const [result, setResult] = useState("ANS = ");
   const [expression, setExpression] = useState("0");
   const [prev, setPrevious] = useState("NUM");
+
 
   let buttons = [9, 8, 7, "+", 6, 5, 4, "-", 3, 2, 1, "*", "C", "/", "%", "=", "0", ".", "A", "D"];
 
