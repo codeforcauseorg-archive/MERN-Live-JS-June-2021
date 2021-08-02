@@ -1,0 +1,38 @@
+.calculator-container {
+  background-color: rgb(56, 25, 25);
+  height: 510px;
+  width: 300px;
+  border-radius: 16px;
+}
+
+strong {
+  display: block;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 6px;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+.expr-header {
+  background-color: antiquewhite;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 32px;
+  max-height: 100px;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
