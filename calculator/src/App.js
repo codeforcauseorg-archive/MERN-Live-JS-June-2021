@@ -7,18 +7,21 @@ function App() {
   let numerics = new Set("0123456789.");
   let operators = new Set("+-%*/");
 
-  const [result, setResult] = useState("");
-  const [expression, setExpression] = useState("");
-  const [prev, setPrevious] = useState("");
+  const [result, setResult] = useState("ANS = ");
+  const [expression, setExpression] = useState("0");
+  const [prev, setPrevious] = useState("NUM");
 
   let buttons = [9, 8, 7, "+", 6, 5, 4, "-", 3, 2, 1, "*", "C", "/", "%", "=", "0", ".", "A", "D"];
 
   const evaluate = () => {
-    setResult(eval(expression));
+    let res = eval(expression)
+    setResult(res);
+    setPrevious("EQ"); // equal-to
   }
 
   const handleClick = (item) => {
     console.log(item);
+
     if (item == "=") {
       evaluate();
     }
@@ -26,16 +29,47 @@ function App() {
       setExpression("");
       setResult("");
     }
-    else if (operators.has(prev)) {
 
+    else if (prev === "OP" && operators.has(item)) {
+      console.log("prev", prev);
+      alert("You can't use consecutive operators");
     }
+
+    else if (item == "D") {
+      setExpression(expression.slice(0, -1));
+      if (prev === "OP") {
+        setPrevious("NUM");
+      }
+    }
+
     else {
-      setExpression(expression + item);
+      if (expression == "0") {
+        setExpression(item);
+      }
+      else {
+        if (prev == "EQ") {
+          setExpression(result.toString() + item);
+        }
+        else {
+          setExpression(expression.toString() + item);
+        }
+      }
+
+      if (operators.has(item)) {
+        setPrevious("OP");
+      } else {
+        setPrevious("NUM")
+      }
     }
   }
 
+  const handleKeyPress = (event) => {
+    let val = event.keyCode - 48;
+    setExpression(expression.toString() + val);
+  }
+
   return (
-    <div className="App">
+    <div className="App" >
       <div className="calculator-container">
         <div style={{ padding: '10px', color: "#fff" }} >
           My Simple Calculator
@@ -48,7 +82,7 @@ function App() {
         <div className="button-container">
           {
             buttons.map((item) => (
-              <button key={item} onClick={() => handleClick(item)}>
+              <button key={item} onClick={() => handleClick(item)} onKeyDown={handleKeyPress}>
                 {item}
               </button>
             ))
