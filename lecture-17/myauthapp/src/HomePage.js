@@ -5,8 +5,6 @@ import { firebaseapp } from "./utils/firebase";
 
 function HomePage() {
   let { user } = useContext(UserContext);
-
-  console.log(user);
   return (
     <div>
       <h1>{user.displayName}</h1>

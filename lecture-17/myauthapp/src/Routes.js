@@ -1,11 +1,11 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import { LoginPage } from "./Login";
-
+import { HomePage } from "./HomePage";
 import React, { useContext } from "react";
 import { UserContext } from "./App";
 
 function Routes() {
-  let user = useContext(UserContext);
+  let { user } = useContext(UserContext);
 
   return (
     <Switch>
@@ -19,8 +19,7 @@ function Routes() {
           } else if (user === null) {
             return <Redirect to="/login"></Redirect>;
           } else {
-            let { HomePage } = require("./HomePage");
-            return React.createElement(HomePage);
+            return <HomePage/>;
           }
         })()}
       </Route>
