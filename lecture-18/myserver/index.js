@@ -4,7 +4,6 @@ const bearerToken = require("express-bearer-token");
 
 let admin = require("firebase-admin");
 let serviceAccount = require("./service.json");
-const { response } = require("express");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
