@@ -28,6 +28,12 @@ app.use(cors());
 app.use(bearerToken());
 app.use(express.json());
 
+app.get("/all", function (req, res) {
+  UrlModel.find().then(function (response) {
+      res.send(response);
+  });
+});
+
 app.get("/:id", function (req, res) {
   let id = req.params.id;
   UrlModel.findOne({ short: id }).then(function (response) {
