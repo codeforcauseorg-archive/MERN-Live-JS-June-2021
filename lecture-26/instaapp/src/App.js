@@ -11,13 +11,15 @@ function App() {
 
   let statecallback = function (newUserState) {
     setUser(newUserState);
-    if(newUserState){
-      firebaseapp.auth().currentUser.getIdToken().then(function(token){
-        axios.defaults.headers["Authorization"] = `Bearer ${token}`;
-        console.log(axios.defaults.headers["Authorization"]);
-      })
+    if (newUserState) {
+      firebaseapp
+        .auth()
+        .currentUser.getIdToken()
+        .then(function (token) {
+          axios.defaults.headers["Authorization"] = `Bearer ${token}`;
+        });
     } else {
-        axios.defaults.headers["Authorization"] = ""
+      axios.defaults.headers["Authorization"] = "";
     }
   };
 
@@ -28,10 +30,10 @@ function App() {
   return (
     <div className="App">
       <UserContext.Provider value={{ user, setUser }}>
-        <Routes />
+          <Routes />
       </UserContext.Provider>
     </div>
   );
 }
 
-export {App, UserContext};
+export { App, UserContext };
