@@ -1,0 +1,6 @@
+{
+  "appId": "org.codeforcause.sample",
+  "appName": "myapp",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}
