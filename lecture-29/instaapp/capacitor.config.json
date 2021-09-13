@@ -1,0 +1,19 @@
+{
+  "appId": "org.codeforcause.instaapp",
+  "appName": "instaapp",
+  "webDir": "build",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorFirebaseAuth": {
+      "providers": ["google.com"],
+      "languageCode": "en",
+      "nativeAuth": true,
+      "properties": {
+        "google": {}
+      },   
+      "permissions": {
+           "google": ["profile"]
+       }
+    }
+  }
+}

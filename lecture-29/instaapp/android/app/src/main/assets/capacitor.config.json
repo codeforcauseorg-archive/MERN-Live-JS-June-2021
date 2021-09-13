@@ -1,0 +1,6 @@
+{
+	"appId": "org.codeforcause.instaapp",
+	"appName": "instaapp",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
