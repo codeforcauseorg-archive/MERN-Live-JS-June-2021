@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "628561115217",
+    "project_id": "bumblebee-dec06",
+    "storage_bucket": "bumblebee-dec06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628561115217:android:cb153ec0065d21ef9be070",
+        "android_client_info": {
+          "package_name": "org.codeforcause.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628561115217-i8eob4s2n4j59t8ap37q0l3skmcc83gm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.codeforcause.sample",
+            "certificate_hash": "d0e32be33f168b31750feecc26ffbcbf728f5869"
+          }
+        },
+        {
+          "client_id": "628561115217-lhpfiu11tm3c61jupng962sonftpq8qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01e9hmWq33Z2dLR_0fGFvUkzG_TcZO2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628561115217-lhpfiu11tm3c61jupng962sonftpq8qo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
