@@ -2,5 +2,20 @@
   "appId": "org.codeforcause.sample",
   "appName": "myapp",
   "webDir": "build",
-  "bundledWebRuntime": false
+  "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorFirebaseAuth": {
+      "providers": ["google.com"],
+      "languageCode": "en",
+      "nativeAuth": false,
+      "properties": {
+        "google": {
+          "hostedDomain": "my-custom-domain.com"
+        }
+      },
+      "permissions": {
+        "google": ["profile", "https://www.googleapis.com/auth/drive"]
+      }
+    }
+  }
 }

@@ -1,5 +1,22 @@
 package org.codeforcause.sample;
 
 import com.getcapacitor.BridgeActivity;
+import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
+import android.os.Bundle;
+import java.util.ArrayList;
+import com.getcapacitor.Plugin;
 
-public class MainActivity extends BridgeActivity {}
+// Initializes the Bridge
+public class MainActivity extends BridgeActivity {
+ @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    // Initializes the Bridge
+    this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
+      // Additional plugins you've installed go here
+      // Ex: add(TotallyAwesomePlugin.class);
+      add(CapacitorFirebaseAuth.class);
+    }});
+  }
+}
